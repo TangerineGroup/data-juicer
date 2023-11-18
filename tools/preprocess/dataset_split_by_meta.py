@@ -41,7 +41,7 @@ def main(src_dir, target_dir, split_key="Dataset"):
 
         for sk, line in gen_data(filepath, split_key):
             outpath = os.path.join(target_dir, f"{name}_{sk}.{postfix}")
-            write_data(sk, line, outpath)
+            write_data(f"{name}:{sk}", line, outpath)
 
     close()
 
